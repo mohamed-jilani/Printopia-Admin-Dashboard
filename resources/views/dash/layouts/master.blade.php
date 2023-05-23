@@ -8,8 +8,8 @@
   @include('dash.layouts.head')
 </head>
 
-<body>
-  <div class="wrapper">
+<body >
+  <div class="wrapper" style="height: auto">
     @include('dash.layouts.main-sidebar')
     <div class="main-panel" id="main-panel">
       <!-- Navbar -->
@@ -17,12 +17,17 @@
       <!-- End Navbar -->
 
       @yield('content') 
+     
+     
+     
+      <!-- footer section -->
+    
+    </div>
       <!-- footer section -->
       @include('dash.layouts.footer')
-      @include('dash.layouts.footer-scripts')
-      <!-- footer section -->
-    </div>
+    @include('dash.layouts.footer-scripts')
   </div>
+
 
 </body>
 

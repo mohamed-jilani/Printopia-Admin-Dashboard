@@ -18,4 +18,10 @@ class Produit extends Model
         'description',
         'formeP'
     ];
+
+    public function type()
+    {
+    return $this->belongsTo(TypeProduit::class, 'Type_id');
+    }
+
 }

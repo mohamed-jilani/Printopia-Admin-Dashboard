@@ -12,11 +12,12 @@ Stock
 <br>
 <br>
 <br>
-mmmmmmm
+mmmmmmmmm
 <br>
 <br>
 <br>
 <br>
+
 @endsection
 
   @section('scripts')

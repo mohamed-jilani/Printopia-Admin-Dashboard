@@ -17,6 +17,9 @@ mmmmmmm
 <br>
 <br>
 <br>
+
+@include('dash.layouts.footer')
+      @include('dash.layouts.footer-scripts')
 @endsection
 
   @section('scripts')

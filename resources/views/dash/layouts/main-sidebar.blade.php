@@ -12,37 +12,61 @@
     </div>
     <div class="sidebar-wrapper" id="sidebar-wrapper">
       <ul class="nav">
-        <li class="active ">
-          <a href="/dashboard">
-            <i class="now-ui-icons design_app"></i>
+        @if($_SERVER['REQUEST_URI'] == '/dash' || $_SERVER['REQUEST_URI'] == '/')
+        <li class="active">
+        @else
+        <li>
+        @endif
+          <a href="/dash">
+            <i class="now-ui-icons business_chart-bar-32"></i>
             <p>Dashboard</p>
           </a>
         </li>
+        @if($_SERVER['REQUEST_URI'] == '/stock')
+        <li class="active">
+        @else
         <li>
+        @endif
           <a href="/stock">
-            <i class="now-ui-icons education_atom"></i>
+            <i class="now-ui-icons design_app"></i>
             <p>Stocks</p>
           </a>
         </li>
+        @if($_SERVER['REQUEST_URI'] == '/clients')
+        <li class="active">
+        @else
         <li>
-          <a href="/clients">
-            <i class="now-ui-icons location_map-big"></i>
+        @endif
+        <a href="/clients">
+            <i class="now-ui-icons users_single-02"></i>
             <p>Clients</p>
           </a>
         </li>
+        @if($_SERVER['REQUEST_URI'] == '/reclammation')
+        <li class="active">
+        @else
         <li>
+        @endif
           <a href="/reclammation">
-            <i class="now-ui-icons ui-1_send"></i>
+            <i class="now-ui-icons ui-1_email-85"></i>
             <p>Réclammations</p>
           </a>
         </li>
+        @if($_SERVER['REQUEST_URI'] == '/users')
+        <li class="active">
+        @else
         <li>
-          <a href="/user">
-            <i class="now-ui-icons users_single-02"></i>
-            <p>User Profile</p>
+        @endif
+          <a href="/users">
+            <i class="now-ui-icons users_circle-08"></i>
+            <p>Users</p>
           </a>
         </li>
+        @if($_SERVER['REQUEST_URI'] == '/produits')
+        <li class="active">
+        @else
         <li>
+        @endif
           <a href="/produits">
             <i class="now-ui-icons design_bullet-list-67"></i>
             <p>Produits</p>

@@ -99,6 +99,7 @@ Clients
           </div>
         </div>
       </div>
+
       @endsection
 
       @section('scripts')

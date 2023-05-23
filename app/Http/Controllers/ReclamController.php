@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reclamation;
 use Illuminate\Http\Request;
 
 class ReclamController extends Controller
@@ -11,7 +12,9 @@ class ReclamController extends Controller
      */
     public function index()
     {
-        return view('dash.reclammation');
+        $reclams=Reclamation::with('user')->get();
+        return view('dash.reclammation',['reclams'=>$reclams]);
+      
     }
 
     /**
@@ -33,9 +36,10 @@ class ReclamController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $reclam = Reclamation::find($id);
+        return view('dash/reclamDetails',['reclam'=>$reclam]);
     }
 
     /**
@@ -57,8 +61,13 @@ class ReclamController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+
+
+    public function destroy($id)
     {
-        //
+        Reclamation::destroy($id);
+
+        return redirect()->route('reclam')->with('success', 'Reclamation deleted successfully.');
     }
+
 }

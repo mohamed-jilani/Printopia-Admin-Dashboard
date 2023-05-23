@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('produits', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('Type_id');
-            $table->foreign('Type_id')->references('id')->on('TypeProduit')->onDelete('cascade');
+            $table->foreign('Type_id')->references('id')->on('typeproduit')->onDelete('cascade');
             $table->string('image');
             $table->integer('qttProduit');
             $table->float('prixProduit');
